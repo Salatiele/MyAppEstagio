@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fitsSystemWindows="true"
+    tools:context=".ItemListActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DDDDDD"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="250dp"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimaryDark"
+                app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+            <ImageView
+                android:background="@drawable/icon_barra"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="830dp"/>
+
+            <TextView
+                android:text="Test User"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:padding="3dp"
+                android:textSize="20dp"
+                android:textColor="#808080"/>
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <include
+            layout="@layout/item_list"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#009688"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="200dp"
+            android:layout_marginLeft="50dp"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:text="Tabela de funcionários"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:background="#FFFFFF"
+                android:textSize="25dp"/>
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#808080">
+
+                <TableRow android:layout_margin="1dp">
+                    <TextView
+                        android:text="ID"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:layout_marginRight="2dp"
+                        android:padding="3dp"
+                        android:textSize="18dp"
+                        android:background="#90EE90"/>
+
+                    <TextView
+                        android:text="Nome completo"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:layout_marginRight="1dp"
+                        android:padding="3dip"
+                        android:textSize="18dp"
+                        android:background="#90EE90"/>
+
+                    <TextView
+                        android:text="Area de atuação"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:padding="3dp"
+                        android:textSize="18dp"
+                        android:background="#90EE90"/>
+                </TableRow>
+            </TableLayout>
+
+            <include
+                layout="@layout/row_table"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

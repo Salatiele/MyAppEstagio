@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.recyclerview.widget.RecyclerView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:listitem="@layout/row_table_content"
+    tools:context=".ItemListActivity"
+    app:layoutManager="LinearLayoutManager"
+    android:id="@+id/row_table"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#808080"/>
